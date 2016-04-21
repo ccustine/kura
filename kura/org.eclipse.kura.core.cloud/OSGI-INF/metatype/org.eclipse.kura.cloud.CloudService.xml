@@ -51,6 +51,18 @@
             default="$EDC"
             description='Topic prefix for system messages.'>
         </AD>
+
+        <AD id="default.cloud.client"
+            name="default.cloud.client"
+            type="String"
+            cardinality="0"
+            required="true"
+            default="classic"
+            description="The default incarnation of a CloudClient instantiated by CloudService.newCloudClient().
+            Classic uses the native Cloud/Data/DataTransport services. A Camel CloudClient handles messages based on user defined XML routes">
+            <Option label="Classic" value="classic" />
+            <Option label="Camel" value="camel" />
+        </AD>
                     
         <AD id="encode.gzip"
             name="encode.gzip"
