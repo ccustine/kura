@@ -203,6 +203,9 @@ public class LinuxNamed {
 			else if (OS_VERSION.equals(KuraConstants.ReliaGATE_50_21_Ubuntu.getImageName() + "_" + KuraConstants.ReliaGATE_50_21_Ubuntu.getImageVersion())) {
 				result = LinuxProcessUtil.start("/etc/init.d/bind9 start");
 			}
+			else if (OS_VERSION.equals(KuraConstants.Intel_DK300.getImageName() + "_" + KuraConstants.Intel_DK300.getImageVersion())) {
+				result = LinuxProcessUtil.start("/bin/systemctl start named");
+			}
 			else {
 				s_logger.info("Linux named enable fallback");
 				result = LinuxProcessUtil.start("/etc/init.d/named start");
@@ -237,6 +240,9 @@ public class LinuxNamed {
 			}
 			else if (OS_VERSION.equals(KuraConstants.ReliaGATE_50_21_Ubuntu.getImageName() + "_" + KuraConstants.ReliaGATE_50_21_Ubuntu.getImageVersion())) {
 				result = LinuxProcessUtil.start("/etc/init.d/bind9 stop");
+			}
+			else if (OS_VERSION.equals(KuraConstants.Intel_DK300.getImageName() + "_" + KuraConstants.Intel_DK300.getImageVersion())) {
+				result = LinuxProcessUtil.start("/bin/systemctl stop named");
 			}
 			else {
 				result = LinuxProcessUtil.start("/etc/init.d/named stop");

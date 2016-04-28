@@ -37,8 +37,8 @@ public class BluetoothGattImpl implements BluetoothGatt, BluetoothProcessListene
 	private final long GATT_SERVICE_TIMEOUT    = 6000;
 	private final long GATT_COMMAND_TIMEOUT    = 2000;
 
-	private final String REGEX_NOT_CONNECTED   = "\\[\\s{3}\\].*>$";
-	private final String REGEX_CONNECTED       = ".*\\[CON\\].*>$";
+	private final String REGEX_NOT_CONNECTED   = "Error:\\sconnect\\serror:.*\\n";
+	private final String REGEX_CONNECTED       = "Connection\\ssuccessful\\n";
 //	private final String REGEX_SERVICES        = "attr.handle\\:.*[0-9|a-f|A-F]{8}(-[0-9|a-f|A-F]{4}){3}-[0-9|a-f|A-F]{12}$";
 //	private final String REGEX_CHARACTERISTICS = "handle.*properties.*value\\shandle.*uuid\\:\\s[0-9|a-f|A-F]{8}(-[0-9|a-f|A-F]{4}){3}-[0-9|a-f|A-F]{12}$";
 	private final String REGEX_READ_CHAR       = "Characteristic\\svalue/descriptor\\:[\\s|0-9|a-f|A-F]*";
