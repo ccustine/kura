@@ -203,7 +203,7 @@ public class LinuxNamed {
 			else if (OS_VERSION.equals(KuraConstants.ReliaGATE_50_21_Ubuntu.getImageName() + "_" + KuraConstants.ReliaGATE_50_21_Ubuntu.getImageVersion())) {
 				result = LinuxProcessUtil.start("/etc/init.d/bind9 start");
 			}
-			else if (OS_VERSION.equals(KuraConstants.Intel_DK300.getImageName() + "_" + KuraConstants.Intel_DK300.getImageVersion())) {
+			else if (OS_VERSION.equals(KuraConstants.RHEL_Generic.getImageName() + "_" + KuraConstants.RHEL_Generic.getImageVersion())) {
 				result = LinuxProcessUtil.start("/bin/systemctl start named");
 			}
 			else {
@@ -241,7 +241,7 @@ public class LinuxNamed {
 			else if (OS_VERSION.equals(KuraConstants.ReliaGATE_50_21_Ubuntu.getImageName() + "_" + KuraConstants.ReliaGATE_50_21_Ubuntu.getImageVersion())) {
 				result = LinuxProcessUtil.start("/etc/init.d/bind9 stop");
 			}
-			else if (OS_VERSION.equals(KuraConstants.Intel_DK300.getImageName() + "_" + KuraConstants.Intel_DK300.getImageVersion())) {
+			else if (OS_VERSION.equals(KuraConstants.RHEL_Generic.getImageName() + "_" + KuraConstants.RHEL_Generic.getImageVersion())) {
 				result = LinuxProcessUtil.start("/bin/systemctl stop named");
 			}
 			else {
